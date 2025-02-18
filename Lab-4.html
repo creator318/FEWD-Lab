@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="lab-4.css">
+  </head>
+  <body>
+    <header>
+      <ul type="none">
+        <li>
+          <a href="#" onclick="document.querySelectorAll('section').forEach(s => {s.hidden=true}); document.getElementById('home').hidden=false;"
+            >Home</a
+          >
+        </li>
+        <li>
+          <form class="search">
+            <input type="text" class="search-box" placeholder="Search" />
+            <button type="submit">Search</button>
+          </form>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <a
+                href="#"
+                onclick="document.querySelectorAll('section').forEach(s => {s.hidden=true}); document.getElementById('signup').hidden=false;"
+                >Signup</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="document.querySelectorAll('section').forEach(s => {s.hidden=true;}); document.getElementById('login').hidden=false;"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <section id="home">
+      <h1>This is homepage</h1>
+    </section>
+    <section id="signup" hidden>
+      <form>
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <input type="text" name="uname" id="uname" placeholder="User Name" />
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input type="password" name="password" id="password" placeholder="Password" />
+        <input type="password" name="cnfpassword" id="cnfpassword" placeholder="Confirm Password" />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section id="login" hidden>
+      <form>
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input type="password" name="password" id="password" placeholder="Password" />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
