@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 3</title>
+    <title>Feedback Form</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -13,11 +13,13 @@
       }
       header {
         background-color: white;
-        padding: 10px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      header h1 {
+        font-size: x-large;
       }
       ul {
         list-style: none;
@@ -26,18 +28,11 @@
         margin: 0;
         padding: 0;
         align-items: center;
-        justify-content: space-between;
         width: 100%;
       }
       ul li {
         display: flex;
         align-items: center;
-      }
-      ul li a {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        font-size: 18px;
       }
       form {
         display: flex;
@@ -49,22 +44,16 @@
         align-items: center;
         flex-direction: column;
       }
-      form.search {
-        flex-direction: row;
-        padding: 5px;
-        border: 0px;
-      }
       input[type="text"],
       input[type="email"],
-      input[type="password"] {
+      input[type="password"],
+      input[type="number"],
+      textarea {
         padding: 10px;
         border-radius: 8px;
         border: 1px solid gray;
         width: 100%;
         box-sizing: border-box;
-      }
-      .search input {
-        padding: 5px 10px;
       }
       button {
         padding: 5px 10px;
@@ -73,10 +62,6 @@
         border: none;
         border-radius: 8px;
         cursor: pointer;
-      }
-      .search button {
-        background-color: #007bff;
-        font-weight: bold;
       }
       section {
         padding: 20px;
@@ -89,62 +74,31 @@
       h1 {
         text-align: center;
       }
-      .search-box {
-        min-width: 250px;
+      textarea {
+        min-height: 100px;
+        resize: vertical;
       }
     </style>
   </head>
   <body>
     <header>
-      <ul type="none">
-        <li>
-          <a href="#" onclick="document.querySelectorAll('section').forEach(s => {s.hidden=true}); document.getElementById('home').hidden=false;"
-            >Home</a
-          >
-        </li>
-        <li>
-          <form class="search">
-            <input type="text" class="search-box" placeholder="Search" />
-            <button type="submit">Search</button>
-          </form>
-        </li>
-        <li>
-          <ul>
-            <li>
-              <a
-                href="#"
-                onclick="document.querySelectorAll('section').forEach(s => {s.hidden=true}); document.getElementById('signup').hidden=false;"
-                >Signup</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                onclick="document.querySelectorAll('section').forEach(s => {s.hidden=true;}); document.getElementById('login').hidden=false;"
-                >Login</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <h1>Feedback Form</h1>
     </header>
-    <section id="home">
-      <h1>This is homepage</h1>
-    </section>
-    <section id="signup" hidden>
+    <section id="feedback">
       <form>
-        <input type="text" name="name" id="name" placeholder="Name" />
-        <input type="text" name="uname" id="uname" placeholder="User Name" />
-        <input type="email" name="email" id="email" placeholder="Email" />
-        <input type="password" name="password" id="password" placeholder="Password" />
-        <input type="password" name="cnfpassword" id="cnfpassword" placeholder="Confirm Password" />
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-    <section id="login" hidden>
-      <form>
-        <input type="email" name="email" id="email" placeholder="Email" />
-        <input type="password" name="password" id="password" placeholder="Password" />
+        <input type="text" name="name" id="name" placeholder="Name (Optional)" />
+        <input type="email" name="email" id="email" placeholder="Email (Optional)" />
+        <input type="text" name="phone" id="phone" placeholder="Phone (Optional)" />
+
+        <label for="rating">Rating (1 to 5):</label>
+        <input type="number" name="rating" id="rating" min="1" max="5" required />
+
+        <label for="questions">Any Questions Regarding Product or Service:</label>
+        <textarea name="questions" id="questions" placeholder="Please write your questions here..."></textarea>
+
+        <label for="comments">Additional Comments (Optional):</label>
+        <textarea name="comments" id="comments" placeholder="Please provide any additional comments..."></textarea>
+
         <button type="submit">Submit</button>
       </form>
     </section>

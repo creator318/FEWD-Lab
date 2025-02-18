@@ -6,11 +6,13 @@ body {
 }
 header {
   background-color: white;
-  padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+  font-size: x-large;
 }
 ul {
   list-style: none;
@@ -19,18 +21,11 @@ ul {
   margin: 0;
   padding: 0;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
 }
 ul li {
   display: flex;
   align-items: center;
-}
-ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
 }
 form {
   display: flex;
@@ -42,22 +37,16 @@ form {
   align-items: center;
   flex-direction: column;
 }
-form.search {
-  flex-direction: row;
-  padding: 5px;
-  border: 0px;
-}
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="number"],
+textarea {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid gray;
   width: 100%;
   box-sizing: border-box;
-}
-.search input {
-  padding: 5px 10px;
 }
 button {
   padding: 5px 10px;
@@ -66,10 +55,6 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-}
-.search button {
-  background-color: #007bff;
-  font-weight: bold;
 }
 section {
   padding: 20px;
@@ -82,6 +67,7 @@ section {
 h1 {
   text-align: center;
 }
-.search-box {
-  min-width: 250px;
+textarea {
+  min-height: 100px;
+  resize: vertical;
 }
