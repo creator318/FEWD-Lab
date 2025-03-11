@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechTrend - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      body {
+        padding-top: 60px; /* Adjust this value based on the height of your navbar */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top rounded-bottom-5 shadow-sm">
+      <div class="container rounded-5">
+        <a class="navbar-brand fw-bold" href="index.html"> <i class="bi bi-lightning-charge-fill me-2"></i>TechTrend </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="partners.html">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button class="btn btn-outline-light me-2 rounded-5" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="bi bi-person-fill me-1"></i>Login
+            </button>
+            <button class="btn btn-warning rounded-5"><i class="bi bi-cart-fill me-1"></i>Cart <span class="badge bg-danger">3</span></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-5">
+          <div class="modal-header bg-primary text-white rounded-top-5">
+            <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <div class="input-group">
+                  <span class="input-group-text rounded-start-5"><i class="bi bi-envelope-fill"></i></span>
+                  <input type="email" class="form-control rounded-end-5" id="email" placeholder="name@example.com" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group">
+                  <span class="input-group-text rounded-start-5"><i class="bi bi-key-fill"></i></span>
+                  <input type="password" class="form-control rounded-end-5" id="password" required />
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" />
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary rounded-5">Sign In</button>
+              </div>
+            </form>
+            <div class="mt-3 text-center">
+              <a href="#" class="text-decoration-none">Forgot password?</a>
+              <hr />
+              <p class="mb-0">Don't have an account?</p>
+              <button class="btn btn-success mt-2 rounded-5">Create New Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header/Hero Section -->
+    <header class="bg-secondary text-white py-5 rounded-5">
+      <div class="container rounded-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">Latest Tech for Modern Life</h1>
+            <p class="lead mb-4">
+              Discover cutting-edge gadgets and accessories that enhance your digital lifestyle. Premium quality at competitive prices.
+            </p>
+            <div class="d-flex gap-2">
+              <a href="products.html" class="btn btn-primary btn-lg rounded-4"> <i class="bi bi-bag-fill me-2"></i>Shop Now </a>
+              <a href="#featured" class="btn btn-outline-light btn-lg rounded-4"> <i class="bi bi-star-fill me-2"></i>Featured Products </a>
+            </div>
+            <div class="mt-4">
+              <span class="badge bg-success rounded-pill p-2 me-2">Free Shipping</span>
+              <span class="badge bg-info rounded-pill p-2 me-2">30-Day Returns</span>
+              <span class="badge bg-warning rounded-pill p-2">24/7 Support</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div id="heroCarousel" class="carousel slide carousel-fade shadow-lg rounded-5 bg-light" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner rounded-5">
+                <div class="carousel-item active">
+                  <img src="images/phone.avif" class="d-block w-50 mx-auto rounded-5" alt="Latest bs" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Latest Smartphones</h5>
+                    <p>Mobile technology at your fingertips</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/laptop.jpg" class="d-block w-50 mx-auto rounded-5" alt="Premium Laptops" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Premium Laptops</h5>
+                    <p>Powerful computing for work and play</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/headphones.jpeg" class="d-block w-50 mx-auto rounded-5" alt="Audio Accessories" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Audio Accessories</h5>
+                    <p>Immersive sound experience for audiophiles</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Alert Banner -->
+    <div class="alert alert-warning alert-dismissible fade show mb-0 rounded-5" role="alert">
+      <div class="container d-flex justify-content-between align-items-center rounded-5">
+        <div>
+          <i class="bi bi-lightning-fill me-2"></i>
+          <strong>Flash Sale!</strong> Get up to 50% off on selected items. <a href="products.html" class="alert-link">Shop now</a>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section id="featured" class="py-5 rounded-5">
+      <div class="container rounded-5">
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold mb-3">Featured Products</h2>
+            <p class="lead text-muted">Our most popular items handpicked for you</p>
+            <hr class="w-25 mx-auto" />
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Product Card 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm hover-shadow rounded-5">
+              <div class="badge bg-danger position-absolute top-0 end-0 m-2">HOT</div>
+              <img src="./images/phone.avif" class="card-img-top rounded-5" alt="Smartphone" />
+              <div class="card-body">
+                <h5 class="card-title">IPhone 14 Pro</h5>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <p class="card-text text-muted mb-0">Flagship Smartphone</p>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                  </div>
+                </div>
+                <p class="fw-bold fs-5 mb-3">₹899 <span class="text-decoration-line-through text-muted fs-6">₹999</span></p>
+                <div class="progress mb-3" style="height: 5px">
+                  <div
+                    class="progress-bar bg-danger"
+                    role="progressbar"
+                    style="width: 85%"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <p class="small text-danger mb-3">Only 7 left in stock!</p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary rounded-5"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                  <button class="btn btn-outline-secondary rounded-5"><i class="bi bi-heart me-2"></i>Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm rounded-5">
+              <div class="badge bg-success position-absolute top-0 end-0 m-2">NEW</div>
+              <img src="./images/laptop.jpg" class="card-img-top rounded-5" alt="Laptop" />
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <p class="card-text text-muted mb-0">Ultralight Laptop</p>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </div>
+                <p class="fw-bold fs-5 mb-3">₹1,299</p>
+                <div class="progress mb-3" style="height: 5px">
+                  <div
+                    class="progress-bar bg-success"
+                    role="progressbar"
+                    style="width: 60%"
+                    aria-valuenow="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <p class="small text-success mb-3">In stock</p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary rounded-5"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                  <button class="btn btn-outline-secondary rounded-5"><i class="bi bi-heart me-2"></i>Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm rounded-5">
+              <div class="badge bg-primary position-absolute top-0 end-0 m-2">POPULAR</div>
+              <img src="./images/headphones.jpeg" class="card-img-top rounded-5" alt="Headphones" />
+              <div class="card-body">
+                <h5 class="card-title">Boat Bass Pro</h5>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <p class="card-text text-muted mb-0">Wireless Headphones</p>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                  </div>
+                </div>
+                <p class="fw-bold fs-5 mb-3">₹249 <span class="text-decoration-line-through text-muted fs-6">₹299</span></p>
+                <div class="progress mb-3" style="height: 5px">
+                  <div
+                    class="progress-bar bg-warning"
+                    role="progressbar"
+                    style="width: 30%"
+                    aria-valuenow="30"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <p class="small text-warning mb-3">Limited stock available</p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary rounded-5"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                  <button class="btn btn-outline-secondary rounded-5"><i class="bi bi-heart me-2"></i>Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm rounded-5">
+              <div class="badge bg-info position-absolute top-0 end-0 m-2">TRENDING</div>
+              <img src="./images/watch.webp" class="card-img-top rounded-5" alt="Smartwatch" />
+              <div class="card-body">
+                <h5 class="card-title">Titan Smart Watch</h5>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <p class="card-text text-muted mb-0">Fitness Smartwatch</p>
+                  <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                  </div>
+                </div>
+                <p class="fw-bold fs-5 mb-3">₹179</p>
+                <div class="progress mb-3" style="height: 5px">
+                  <div
+                    class="progress-bar bg-info"
+                    role="progressbar"
+                    style="width: 75%"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <p class="small text-info mb-3">Selling fast!</p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary rounded-5"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                  <button class="btn btn-outline-secondary rounded-5"><i class="bi bi-heart me-2"></i>Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="products.html" class="btn btn-outline-primary btn-lg rounded-4"> <i class="bi bi-grid-3x3-gap me-2"></i>View All Products </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5 bg-light rounded-5">
+      <div class="container rounded-5">
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold mb-3">Shop by Category</h2>
+            <p class="lead text-muted">Browse our extensive collection of tech products</p>
+            <hr class="w-25 mx-auto" />
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Category 1 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="card text-center h-100 border-0 shadow-sm rounded-5">
+              <div class="card-body">
+                <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                  <i class="bi bi-phone fs-1 text-primary"></i>
+                </div>
+                <h5 class="card-title">Smartphones</h5>
+                <p class="card-text small text-muted">Latest models from top brands</p>
+                <a href="products.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="card text-center h-100 border-0 shadow-sm rounded-5">
+              <div class="card-body">
+                <div class="bg-success bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                  <i class="bi bi-laptop fs-1 text-success"></i>
+                </div>
+                <h5 class="card-title">Laptops</h5>
+                <p class="card-text small text-muted">For work and entertainment</p>
+                <a href="products.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="card text-center h-100 border-0 shadow-sm rounded-5">
+              <div class="card-body">
+                <div class="bg-danger bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                  <i class="bi bi-headphones fs-1 text-danger"></i>
+                </div>
+                <h5 class="card-title">Audio</h5>
+                <p class="card-text small text-muted">Headphones & speakers</p>
+                <a href="products.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="card text-center h-100 border-0 shadow-sm rounded-5">
+              <div class="card-body">
+                <div class="bg-info bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                  <i class="bi bi-smartwatch fs-1 text-info"></i>
+                </div>
+                <h5 class="card-title">Wearables</h5>
+                <p class="card-text small text-muted">Smartwatches & fitness trackers</p>
+                <a href="products.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="card text-center h-100 border-0 shadow-sm rounded-5">
+              <div class="card-body">
+                <div class="bg-warning bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                  <i class="bi bi-camera fs-1 text-warning"></i>
+                </div>
+                <h5 class="card-title">Cameras</h5>
+                <p class="card-text small text-muted">Digital & action cameras</p>
+                <a href="products.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 6 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="card text-center h-100 border-0 shadow-sm rounded-5">
+              <div class="card-body">
+                <div class="bg-secondary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+                  <i class="bi bi-controller fs-1 text-secondary"></i>
+                </div>
+                <h5 class="card-title">Gaming</h5>
+                <p class="card-text small text-muted">Consoles & accessories</p>
+                <a href="products.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="py-5 bg-secondary text-white rounded-5">
+      <div class="container rounded-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="display-5 fw-bold mb-3">Special Offers</h2>
+            <p class="lead mb-4">Subscribe to our newsletter and get exclusive deals delivered to your inbox.</p>
+
+            <form class="row g-3">
+              <div class="col-md-8">
+                <div class="input-group rounded-4">
+                  <span class="input-group-text bg-white rounded-start-5">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+                  <input type="email" class="form-control rounded-end-5" placeholder="Your email address" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <button type="submit" class="btn btn-warning w-100 rounded-5">Subscribe</button>
+              </div>
+            </form>
+
+            <div class="mt-4">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary rounded-circle p-2 me-3">
+                  <i class="bi bi-percent text-white"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Exclusive Discounts</h5>
+                  <p class="mb-0 text-light">Up to 30% off for subscribers</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-success rounded-circle p-2 me-3">
+                  <i class="bi bi-gift text-white"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Free Gifts</h5>
+                  <p class="mb-0 text-light">With selected purchases</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="bg-info rounded-circle p-2 me-3">
+                  <i class="bi bi-truck text-white"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Priority Shipping</h5>
+                  <p class="mb-0 text-light">Get your orders faster</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card bg-primary text-white rounded-5">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h3 class="card-title mb-0">Deal of the Day</h3>
+                  <span class="badge bg-warning text-dark p-2">24% OFF</span>
+                </div>
+                <h4>Premium Wireless Earbuds</h4>
+                <p>Experience crystal-clear sound with active noise cancellation and 30-hour battery life.</p>
+
+                <div class="d-flex align-items-center mb-3">
+                  <h2 class="mb-0 me-2">₹89.99</h2>
+                  <span class="text-decoration-line-through">₹119.99</span>
+                </div>
+
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span>Available: 45%</span>
+                    <span>Sold: 27/50</span>
+                  </div>
+                  <div class="progress" style="height: 10px">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 45%"
+                      aria-valuenow="45"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-warning flex-grow-1 rounded-5"><i class="bi bi-cart-fill me-2"></i>Add to Cart</button>
+                  <button class="btn btn-outline-light rounded-5">
+                    <i class="bi bi-eye-fill"></i>
+                  </button>
+                </div>
+
+                <div class="mt-3 d-flex justify-content-center">
+                  <div class="text-center">
+                    <div id="countdown" class="d-flex gap-2">
+                      <div class="bg-dark p-2 rounded">
+                        <h4 class="mb-0">12</h4>
+                        <small>Hours</small>
+                      </div>
+                      <div class="bg-dark p-2 rounded">
+                        <h4 class="mb-0">45</h4>
+                        <small>Minutes</small>
+                      </div>
+                      <div class="bg-dark p-2 rounded">
+                        <h4 class="mb-0">30</h4>
+                        <small>Seconds</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 rounded-5">
+      <div class="container rounded-5">
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold mb-3">What Our Customers Say</h2>
+            <p class="lead text-muted">Trusted by thousands of satisfied customers worldwide</p>
+            <hr class="w-25 mx-auto" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div id="testimonialCarousel" class="carousel slide rounded-5" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-5">
+                <div class="carousel-item active">
+                  <div class="card border-0 shadow-sm">
+                    <div class="card-body p-5 text-center">
+                      <img
+                        src="https://source.unsplash.com/random/100x100/?portrait"
+                        class="rounded-circle mb-3"
+                        width="80"
+                        height="80"
+                        alt="Customer"
+                      />
+                      <div class="mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </div>
+                      <p class="lead fst-italic mb-4">
+                        "The UltraPhone Pro exceeded all my expectations. The camera quality is outstanding and battery life is incredible. TechTrend
+                        delivered it faster than expected too!"
+                      </p>
+                      <h5 class="mb-1">Sarah Johnson</h5>
+                      <p class="text-muted mb-0">Marketing Executive</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card border-0 shadow-sm">
+                    <div class="card-body p-5 text-center">
+                      <img src="https://source.unsplash.com/random/100x100/?man" class="rounded-circle mb-3" width="80" height="80" alt="Customer" />
+                      <div class="mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
+                      </div>
+                      <p class="lead fst-italic mb-4">
+                        "I've been shopping with TechTrend for years and they never disappoint. Their customer service is top-notch and the products
+                        are always as described."
+                      </p>
+                      <h5 class="mb-1">Michael Chen</h5>
+                      <p class="text-muted mb-0">Software Developer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card border-0 shadow-sm">
+                    <div class="card-body p-5 text-center">
+                      <img
+                        src="https://source.unsplash.com/random/100x100/?woman"
+                        class="rounded-circle mb-3"
+                        width="80"
+                        height="80"
+                        alt="Customer"
+                      />
+                      <div class="mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </div>
+                      <p class="lead fst-italic mb-4">
+                        "The PowerBook Air is a game-changer for my workflow. It's lightweight yet powerful, and the battery lasts all day. Definitely
+                        worth every penny!"
+                      </p>
+                      <h5 class="mb-1">Emily Rodriguez</h5>
+                      <p class="text-muted mb-0">Graphic Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-primary mx-2 rounded-4" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                  <i class="bi bi-arrow-left"></i>
+                </button>
+                <button class="btn btn-primary mx-2 rounded-4" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="py-5 bg-light rounded-5">
+      <div class="container rounded-5">
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold mb-3">Trusted Brands</h2>
+            <p class="lead text-muted">We partner with the world's leading tech manufacturers</p>
+            <hr class="w-25 mx-auto" />
+          </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center g-4">
+          <div class="col-4 col-md-2 text-center">
+            <div class="bg-white p-3 rounded-5 shadow-sm">
+              <img src="./images/gs.png" class="img-fluid rounded-5" alt="Brand Logo" />
+            </div>
+          </div>
+          <div class="col-4 col-md-2 text-center">
+            <div class="bg-white p-3 rounded-5 shadow-sm">
+              <img src="./images/google.png" class="img-fluid" alt="Brand Logo" />
+            </div>
+          </div>
+          <div class="col-4 col-md-2 text-center">
+            <div class="bg-white p-3 rounded-5 shadow-sm">
+              <img src="./images/microsoft.webp" class="img-fluid" alt="Brand Logo" />
+            </div>
+          </div>
+          <div class="col-4 col-md-2 text-center">
+            <div class="bg-white p-3 rounded-5 shadow-sm">
+              <img src="./images/kmit.jpg" class="img-fluid" alt="Brand Logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 rounded-top-5">
+      <div class="container rounded-5">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="mb-4 fw-bold">TechTrend</h5>
+            <p class="mb-4">Your one-stop destination for premium tech products and accessories. Quality guaranteed.</p>
+            <div class="d-flex gap-3 mb-4">
+              <a href="#" class="text-white bg-primary p-2 rounded-circle">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="text-white bg-info p-2 rounded-circle">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="#" class="text-white bg-danger p-2 rounded-circle">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="text-white bg-primary p-2 rounded-circle">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-headset fs-4 me-2"></i>
+              <div>
+                <p class="mb-0">Customer Support</p>
+                <h5 class="mb-0">1-800-TECH-HELP</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5 class="mb-4 fw-bold">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="index.html" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Home </a>
+              </li>
+              <li class="mb-3">
+                <a href="about.html" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>About Us </a>
+              </li>
+              <li class="mb-3">
+                <a href="products.html" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Products </a>
+              </li>
+              <li class="mb-3">
+                <a href="gallery.html" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Gallery </a>
+              </li>
+              <li class="mb-3">
+                <a href="partners.html" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Partners </a>
+              </li>
+              <li>
+                <a href="contact.html" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Contact Us </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5 class="mb-4 fw-bold">Customer Service</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="#" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>My Account </a>
+              </li>
+              <li class="mb-3">
+                <a href="#" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Order Tracking </a>
+              </li>
+              <li class="mb-3">
+                <a href="#" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Wishlist </a>
+              </li>
+              <li class="mb-3">
+                <a href="#" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Returns & Exchanges </a>
+              </li>
+              <li class="mb-3">
+                <a href="#" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>Shipping Policy </a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-white"> <i class="bi bi-chevron-right me-2 text-primary"></i>FAQs </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5 class="mb-4 fw-bold">Contact Info</h5>
+            <div class="mb-3 d-flex">
+              <i class="bi bi-geo-alt-fill me-3 text-primary"></i>
+              <p class="mb-0">123 Tech Street, Silicon Valley, CA 94043, USA</p>
+            </div>
+            <div class="mb-3 d-flex">
+              <i class="bi bi-telephone-fill me-3 text-primary"></i>
+              <p class="mb-0">+1 (555) 123-4567</p>
+            </div>
+            <div class="mb-3 d-flex">
+              <i class="bi bi-envelope-fill me-3 text-primary"></i>
+              <p class="mb-0">info@techtrend.com</p>
+            </div>
+            <div class="mb-4 d-flex">
+              <i class="bi bi-clock-fill me-3 text-primary"></i>
+              <p class="mb-0">Mon-Fri: 9AM-6PM<br />Sat: 10AM-4PM</p>
+            </div>
+            <div>
+              <img src="https://source.unsplash.com/random/200x60/?payment-methods" class="img-fluid rounded" alt="Payment Methods" />
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2025 TechTrend. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-white text-decoration-none me-3">Terms of Service</a>
+            <a href="#" class="text-white text-decoration-none">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-lg position-fixed bottom-0 end-0 m-4 rounded-circle" id="back-to-top">
+      <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
