@@ -1,3 +1,5 @@
+import ContactForm from "../Components/ContactForm";
+
 export default function Contact() {
   return (
     <div>
@@ -192,38 +194,7 @@ export default function Contact() {
       <section className="py-5 bg-light">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6">
-              <h2 className="fw-bold mb-4">Send Us a Message</h2>
-              <form>
-                <div className="mb-3">
-                  <label for="name" className="form-label">
-                    Your Name
-                  </label>
-                  <input type="text" className="form-control" id="name" required />
-                </div>
-                <div className="mb-3">
-                  <label for="email" className="form-label">
-                    Email Address
-                  </label>
-                  <input type="email" className="form-control" id="email" required />
-                </div>
-                <div className="mb-3">
-                  <label for="subject" className="form-label">
-                    Subject
-                  </label>
-                  <input type="text" className="form-control" id="subject" required />
-                </div>
-                <div className="mb-3">
-                  <label for="message" className="form-label">
-                    Message
-                  </label>
-                  <textarea className="form-control" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary rounded-4">
-                  Send Message
-                </button>
-              </form>
-            </div>
+            <ContactForm/>
             <div className="col-lg-6 mt-4 mt-lg-0">
               <h2 className="fw-bold mb-4">Our Location</h2>
               <div className="mapouter">
